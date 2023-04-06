@@ -91,19 +91,3 @@ function editNote(noteIndex){
 }
 
 
-let search = document.getElementById('search')
-search.addEventListener('input', ()=> {
-    let inputValue = search.value.toLowerCase()
-    let allCards = document.getElementsByClassName('card');
-
-    Array.from(allCards).forEach((ele)=>{
-        let cardText = ele.getElementsByTagName('p')[0].innerText
-
-        if(cardText.toLowerCase().includes(inputValue)){
-            ele.style.display = 'block';
-        }
-        else{
-            ele.style.display ='none';
-        }
-    })
-})
